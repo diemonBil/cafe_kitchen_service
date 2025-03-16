@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Dish List</h1>
+    <ul>
+        {% for dish in dish_list %}
+            <li>{{ dish.name }} - {{ dish.dish_type.name }}</li>
+            <a href="{% url 'kitchen:dish_update' dish.pk %}">Edit</a>
+            <a href="{% url 'kitchen:dish_delete' dish.pk %}">Delete</a>
+        {% empty %}
+            <li>No dishes available.</li>
+        {% endfor %}
+        <a href="{% url 'kitchen:dish_create' %}" class="btn btn-primary">Add New Dish</a>
+    </ul>
+{% endblock %}

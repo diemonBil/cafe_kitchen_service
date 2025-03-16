@@ -8,7 +8,7 @@ class DishType(models.Model):
     name = models.CharField(max_length=255)
 
     class Meta:
-        ordering = ('name', )
+        ordering = ("name", )
 
     def __str__(self):
         return self.name
@@ -19,7 +19,7 @@ class Cook(AbstractUser):
         validators=[MinValueValidator(0)]
     )
     class Meta:
-        ordering = ('username', )
+        ordering = ("username", )
     def __str__(self):
         return f"{self.username}: ({self.first_name} {self.last_name})"
 
@@ -30,11 +30,15 @@ class Dish(models.Model):
     dish_type = models.ForeignKey(
         DishType,
         on_delete=models.CASCADE,
-        related_name="dishes",
+        related_name="dishes_by_type"
     )
-    cooks = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="dishes")
+    cooks = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        related_name="dishes_by_cooks"
+    )
 
     class Meta:
-        ordering = ('name', )
+        ordering = ("name",)
+
     def __str__(self):
-        return f"{self.name} (price: {self.price}, type: {self.dish_type.name})"
+        return f"{self.name} (price: {self.price}, type: {self.dish_type.name if self.dish_type else 'No type'})"
