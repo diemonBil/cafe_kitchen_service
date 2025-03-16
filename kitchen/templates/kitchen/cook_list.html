@@ -4,6 +4,8 @@
     <ul>
         {% for cook in cook_list %}
             <li>{{ cook.username }} - {{ cook.first_name }} {{ cook.last_name }}</li>
+            <a href="{% url 'kitchen:cook_edit' cook.pk %}">Edit</a>
+            <a href="{% url 'kitchen:cook_delete' cook.pk %}">Delete</a>
         {% empty %}
             <li>No cooks available.</li>
         {% endfor %}
