@@ -9,5 +9,6 @@
         {% empty %}
             <li>No cooks available.</li>
         {% endfor %}
+        <li><a href="{% url 'kitchen:cook_create'%}">Add cook</a></li>
     </ul>
 {% endblock %}

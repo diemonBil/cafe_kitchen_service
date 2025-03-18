@@ -36,3 +36,13 @@ class DishForm(forms.ModelForm):
     class Meta:
         model = Dish
         fields = "__all__"  # Include all fields from the Dish model
+
+# Form for searching dishes
+class DishSearchForm(forms.Form):
+    name = forms.CharField(
+        widget=forms.TextInput(
+            attrs={"placeholder": "Borsh...",}
+        ),
+        label="Search by name",
+        required=False
+    )
