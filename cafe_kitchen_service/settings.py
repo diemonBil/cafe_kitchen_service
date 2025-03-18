@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "kitchen",  # Custom app for managing kitchen-related models
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 # Middleware configuration (handles security, authentication, sessions, etc.)
@@ -111,3 +113,7 @@ AUTH_USER_MODEL = "kitchen.Cook"
 # Redirect users to the cook list page after login
 LOGIN_REDIRECT_URL = "/cook-list/"
 LOGOUT_REDIRECT_URL = "/accounts/login/"
+
+# Set the CRISPY template pack to Bootstrap 5
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"

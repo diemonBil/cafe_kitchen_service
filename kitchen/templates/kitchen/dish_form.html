@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% block content %}
     <h2>{% if form.instance.pk %}Update{% else %}Create{% endif %} Dish</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
+         {{ form|crispy }}
+        <button class="btn btn-primary" type="submit">Save</button>
     </form>
     <a href="{% url 'kitchen:dish_list' %}">Cancel</a>
 {% endblock %}
