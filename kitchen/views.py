@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import UpdateView, DeleteView
@@ -114,3 +115,13 @@ class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Dish
     template_name = "kitchen/dish_confirm_delete.html"
     success_url = reverse_lazy("kitchen:dish_list")
+
+"""Main page displaying statistics on dishes, cooks, and dish types."""
+class HomeView(generic.View):
+    def get(self, request):
+        context = {
+            "dish_count": Dish.objects.count(),
+            "cook_count": Cook.objects.count(),
+            "dish_type_count": DishType.objects.count(),
+        }
+        return render(request, "kitchen/home.html", context)

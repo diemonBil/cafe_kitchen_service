@@ -7,8 +7,8 @@ from kitchen import views
 app_name = "kitchen"
 
 urlpatterns = [
-    # Django admin panel
-    path("admin/", admin.site.urls),
+    # Main page view
+    path("", views.HomeView.as_view(), name="home"),
 
     # Cook-related views
     path("", views.CookListView.as_view(), name="cook_list"),  # Default home page - cook list

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1>Welcome to the Cafe Kitchen Management System</h1>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Total Dishes</h3>
+                <p class="fs-4">{{ dish_count }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Total Cooks</h3>
+                <p class="fs-4">{{ cook_count }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Total Dish Types</h3>
+                <p class="fs-4">{{ dish_type_count }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
