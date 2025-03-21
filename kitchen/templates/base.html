@@ -24,6 +24,9 @@
 
               {% if user.is_authenticated %}
               <li class="nav-item">
+                <a class="nav-link"  href="{% url 'kitchen:cook_list' %}">Cook list</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link"  href="{% url 'kitchen:dish_type_list' %}">Dish Types</a>
               </li>
               <li class="nav-item">

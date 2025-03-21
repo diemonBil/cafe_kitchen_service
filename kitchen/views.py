@@ -106,7 +106,7 @@ class DishCreateView(LoginRequiredMixin, generic.CreateView):
 """Allows an authenticated user to update an existing dish."""
 class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Dish
-    fields = ["name", "description", "price", "dish_type", "cooks"]
+    form_class = DishForm
     template_name = "kitchen/dish_form.html"
     success_url = reverse_lazy("kitchen:dish_list")
 
