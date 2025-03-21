@@ -1,0 +1,198 @@
+[
+{
+    "model": "kitchen.dishtype",
+    "pk": 2,
+    "fields": {
+        "name": "Soup"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 3,
+    "fields": {
+        "name": "Pasta"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 4,
+    "fields": {
+        "name": "Pizza"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 5,
+    "fields": {
+        "name": "Dessert"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 6,
+    "fields": {
+        "name": "Salad"
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$oFC13LSljNYaeEhEFgWk5M$Myb8+Oi43lUbGsLbvAeunk5ulu8Aa99IZlM+JQaqL88=",
+        "last_login": "2025-03-16T10:50:43.259Z",
+        "is_superuser": false,
+        "username": "anthony_b",
+        "first_name": "Anthony",
+        "last_name": "Bourdain",
+        "email": "anthony_b@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-16T08:18:37.493Z",
+        "years_of_experience": 8,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$9szBPY6YwlM7hQYszSAhSE$vSovkAaFIZIJafQfcCeac6pnNUAqeqfZwxV2ysPD2UY=",
+        "last_login": "2025-03-21T12:01:12.750Z",
+        "is_superuser": false,
+        "username": "gordon_r",
+        "first_name": "Gordon",
+        "last_name": "Ramsay",
+        "email": "gordon_r@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-16T10:52:56.771Z",
+        "years_of_experience": 9,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$51xjvAdVtKHZE1dEHJZ5sG$RlvgtJpdIi2hmOnm/k23TQ1ev0UI0Juj4ejmQOv1KZ4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jamie_o",
+        "first_name": "Jamie",
+        "last_name": "Oliver",
+        "email": "jamie_o@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-18T13:45:40.454Z",
+        "years_of_experience": 6,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$RlWL1NMJmxso0wdS3lCRFZ$AwYwFgJ47nWCDzuaGz5SFC2cUCnsRxdqsvoz1IRbMwE=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "gaston_a",
+        "first_name": "Gaston",
+        "last_name": "Acurio",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-18T13:46:28.721Z",
+        "years_of_experience": 3,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$qNbRvEJDTB7SHbBwxPxakF$vs2xZI+ZfPscdTmgR9lU+XysvTtGqTdnJ7c1m+VesfU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "massimo_b",
+        "first_name": "Massimo",
+        "last_name": "Bottura",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-18T13:46:58.744Z",
+        "years_of_experience": 18,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 1,
+    "fields": {
+        "name": "Borshchsh",
+        "description": "good soup",
+        "price": "12.40",
+        "dish_type": 3,
+        "cooks": [
+            2
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 4,
+    "fields": {
+        "name": "Goulash soup",
+        "description": "",
+        "price": "16.00",
+        "dish_type": 2,
+        "cooks": [
+            2
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 5,
+    "fields": {
+        "name": "╤annelloni",
+        "description": "",
+        "price": "10.00",
+        "dish_type": 3,
+        "cooks": [
+            3
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 6,
+    "fields": {
+        "name": "Pepperoni pizza",
+        "description": "Pizza with spicy pepperoni and cheese.",
+        "price": "13.00",
+        "dish_type": 4,
+        "cooks": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 7,
+    "fields": {
+        "name": "Cheesecake",
+        "description": "Creamy cheesecake with berry sauce.",
+        "price": "7.00",
+        "dish_type": 5,
+        "cooks": [
+            3
+        ]
+    }
+}
+]

@@ -13,16 +13,10 @@ import os
 from pathlib import Path
 
 # Define the base directory of the project
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # SECURITY WARNING: Keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-*2axq3-f=4_hnkbq5zk#m-5xq6-q)13c6lu2zf*y=!pdtwo=sp")
-
-# SECURITY WARNING: Don't run with debug turned on in production!
-DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"  # Set to False in production
-
-# Hosts that are allowed to serve this Django project
-ALLOWED_HOSTS = ["127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -70,14 +64,6 @@ TEMPLATES = [
 
 # WSGI application entry point
 WSGI_APPLICATION = "cafe_kitchen_service.wsgi.application"
-
-# Database configuration (using SQLite for development)
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 # Password validation settings for security
 AUTH_PASSWORD_VALIDATORS = [
