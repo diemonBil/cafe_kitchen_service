@@ -16,13 +16,13 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: Keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-*2axq3-f=4_hnkbq5zk#m-5xq6-q)13c6lu2zf*y=!pdtwo=sp"
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-*2axq3-f=4_hnkbq5zk#m-5xq6-q)13c6lu2zf*y=!pdtwo=sp")
 
 # SECURITY WARNING: Don't run with debug turned on in production!
-DEBUG = True  # Set to False in production
+DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"  # Set to False in production
 
 # Hosts that are allowed to serve this Django project
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
