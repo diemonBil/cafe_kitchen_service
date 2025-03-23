@@ -4,7 +4,11 @@ Django project for managing dish and cookers in cafe
 
 ## Check it out
 
-[Cafe project deployed to Render]
+[Cafe project deployed to Render](https://cafe-kitchen-service-5es2.onrender.com/)
+
+Test user:
+- login: gordon_r
+- password: 26rzgLE85Qrekpu
 
 Python3 must be already installed
 ```shell
